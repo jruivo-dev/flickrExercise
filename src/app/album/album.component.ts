@@ -17,6 +17,9 @@ export class AlbumComponent implements OnInit {
     this.getPhotos();
   }
 
+  /**
+   * Loads the album photos of a certain page
+   */
   getPhotos() {
     this.flickrService
       .getFlickrImages(this.current_page)
@@ -25,12 +28,19 @@ export class AlbumComponent implements OnInit {
       });
   }
 
+  /**
+   * Navigates to the previous page of the album
+   */
   onPrevious() {
     if (this.current_page > 1) {
       this.current_page -= 1;
     }
     this.getPhotos();
   }
+
+  /**
+   * Navigates the next page of the album
+   */
 
   onNext() {
     this.getPhotos();

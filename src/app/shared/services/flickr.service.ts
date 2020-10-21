@@ -13,8 +13,10 @@ export class FlickrService {
 
   private url = environment.photoApiUrl;
 
-  // TODO find a rxjs operator to simplify this function
-
+  /**
+   * Returns a list of Photos, given a page
+   * @param  {number} page
+   */
   getFlickrImages(page: number) {
     const params = new HttpParams().set('page', page.toString());
     return this.http.get(this.url, { params }).pipe(
@@ -23,6 +25,7 @@ export class FlickrService {
         res.photos.photo.forEach((photoRes: PhotoAccessData) => {
           let description: string;
 
+          // TODO find a rxjs operator to simplify this
           this.getImageDescription(photoRes.id).subscribe(
             (descriptionRes) => {
               description = descriptionRes;
@@ -42,7 +45,10 @@ export class FlickrService {
       })
     );
   }
-
+  /**
+   * Returns the description of photo, given a photoId
+   * @param  {string} photoId
+   */
   getImageDescription(photoId: string) {
     const url = environment.descriptionApiUrl;
 
