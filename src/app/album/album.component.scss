@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  .album {
+    padding: 3rem;
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fill, 25rem);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+  }
+}

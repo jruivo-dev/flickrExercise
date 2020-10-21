@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card__title">
+    {{ photo.title.length > 0 ? photo.title : "Untitled" }}
+  </div>
+  <img src="{{ photo.imgUrl }}" alt="" class="card__image" />
+  <div class="card__description">
+    {{ photo.description.length > 0 ? photo.description : "No description" }}
+  </div>
+</div>

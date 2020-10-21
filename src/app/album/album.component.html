@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <h1>Flickr album</h1>
+
+  <span class="page">Current page {{ current_page }}</span>
+  <div class="paginator">
+    <button
+      class="paginator__previous-btn"
+      [disabled]="current_page === 1"
+      (click)="onPrevious()"
+    >
+      Previous
+    </button>
+    <button class="paginator__next-btn" (click)="onNext()">Next</button>
+  </div>
+  <div class="album">
+    <div class="album__picture" *ngFor="let photo of displayedPhotos">
+      <app-photo [photo]="photo"></app-photo>
+    </div>
+  </div>
+</div>

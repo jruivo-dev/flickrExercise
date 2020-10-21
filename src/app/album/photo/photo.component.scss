@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  height: 30rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+  .card__title {
+    word-break: break-all;
+  }
+  .card__image {
+    min-width: 0;
+    min-height: 0;
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .card__description {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}

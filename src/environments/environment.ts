@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  photoApiUrl:
+    'https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=a4e45957eb2382a8c056fd88146d8267&per_page=20&format=json&nojsoncallback=1',
+  descriptionApiUrl:
+    'https://www.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=a4e45957eb2382a8c056fd88146d8267&format=json&nojsoncallback=1',
 };
 
 /*
